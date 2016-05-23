@@ -10,7 +10,8 @@
     </settings>
 
 	<typeAliases>
-
+        <typeAlias type="com.ldd.dao.entity.user.TbUser" alias="User" />
+        <typeAlias type="com.ldd.dao.entity.role.TbRole" alias="Role" />
 	</typeAliases>
 
 
