@@ -102,4 +102,19 @@
 	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg ref="sqlSessionFactory" />
 	</bean>
+
+	<bean id="securityManager" class="com.ldd.common.base.login.shiro.ShiroRealm" />
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+		<property name="securityManager" ref="securityManager"></property>
+		<property name="loginUrl" value="/" />
+		<property name="successUrl" value="/login_suc.do" />
+		<property name="unauthorizedUrl" value="/login.do" />
+		<property name="filterChainDefinitions">
+			<value>
+				/statics/** = anon
+				/login.do = anon
+				/**=authc
+			</value>
+		</property>
+	</bean>
 </beans>
