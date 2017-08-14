@@ -42,7 +42,7 @@ public class LoginLogoutTest {
         if("success".equals(erro)){
             Assert.assertEquals(true,subject.isAuthenticated());
             subject.logout();
-            System.out.println("登录成功");
+            System.out.println("登录成功！");
         }else{
             System.out.println(erro);
         }

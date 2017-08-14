@@ -57,85 +57,22 @@
     </properties>
     <!-- 设定主仓库，按设定顺序进行查找。 -->
     <repositories>
-
         <!-- 如有Nexus私服, 取消注释并指向正确的服务器地址. -->
         <repository>
             <id>nexus-repos</id>
             <name>Team Nexus Repository</name>
-            <url>http://192.168.0.180:8081/nexus/content/groups/public</url>
+            <url>http://localhost:8083/nexus/content/groups/public</url>
         </repository>
-        <repository>
-            <id>oschina-repos</id>
-            <name>Oschina Releases</name>
-            <url>http://maven.oschina.net/content/groups/public</url>
-        </repository>
-
-        <repository>
-            <id>java-repos</id>
-            <name>Java Repository</name>
-            <url>http://download.java.net/maven/2/</url>
-        </repository>
-
-        <repository>
-            <id>springsource-repos</id>
-            <name>SpringSource Repository</name>
-            <url>http://repo.spring.io/release/</url>
-        </repository>
-
-        <repository>
-            <id>central-repos</id>
-            <name>Central Repository</name>
-            <url>http://repo.maven.apache.org/maven2</url>
-        </repository>
-
-        <repository>
-            <id>central-repos2</id>
-            <name>Central Repository 2</name>
-            <url>http://repo1.maven.org/maven2/</url>
-        </repository>
-
-        <repository>
-            <id>activiti-repos</id>
-            <name>Activiti Repository</name>
-            <url>https://maven.alfresco.com/nexus/content/groups/public</url>
-        </repository>
-
-        <repository>
-            <id>activiti-repos2</id>
-            <name>Activiti Repository 2</name>
-            <url>https://app.camunda.com/nexus/content/groups/public</url>
-        </repository>
-
-        <repository>
-            <id>thinkgem-repos</id>
-            <name>ThinkGem Repository</name>
-            <url>http://git.oschina.net/thinkgem/repos/raw/master</url>
-        </repository>
-
-        <repository>
-            <id>thinkgem-repos2</id>
-            <name>ThinkGem Repository 2</name>
-            <url>https://raw.github.com/thinkgem/repository/master</url>
-        </repository>
-
     </repositories>
 
     <!-- 设定插件仓库 -->
     <pluginRepositories>
-
         <!-- 如有Nexus私服, 取消注释并指向正确的服务器地址.-->
         <pluginRepository>
             <id>nexus-repos</id>
             <name>Team Nexus Repository</name>
-            <url>http://192.168.0.180:8081/nexus/content/groups/public</url>
+            <url>http://localhost:8083/nexus/content/groups/public</url>
         </pluginRepository>
-
-        <pluginRepository>
-            <id>oschina-repos</id>
-            <name>Oschina Releases</name>
-            <url>http://maven.oschina.net/content/groups/public</url>
-        </pluginRepository>
-
     </pluginRepositories>
 
     <dependencies>
@@ -432,12 +369,6 @@
             <version>2.4</version>
             <classifier>jdk15</classifier>
         </dependency>
-        <!-- fchelper -->
-        <dependency>
-            <groupId>com.fusioncharts</groupId>
-            <artifactId>fchelper</artifactId>
-            <version>1.0</version>
-        </dependency>
         <!-- freemarker engine -->
         <dependency>
             <groupId>org.freemarker</groupId>
@@ -452,11 +383,6 @@
             <version>1.4.7</version>
         </dependency>
 
-        <dependency>
-            <groupId>net.sourceforge.pinyin4j</groupId>
-            <artifactId>pinyin4j</artifactId>
-            <version>2.5.0</version>
-        </dependency>
         <!-- poi office -->
         <dependency>
             <groupId>org.apache.poi</groupId>
@@ -492,19 +418,6 @@
             <groupId>org.apache.axis</groupId>
             <artifactId>axis-ant</artifactId>
             <version>1.4</version>
-        </dependency>
-
-        <!-- BASE64Decoder -->
-        <dependency>
-            <groupId>sun.misc</groupId>
-            <artifactId>BASE64Decoder</artifactId>
-            <version>1.0</version>
-        </dependency>
-        <!-- QRCode -->
-        <dependency>
-            <groupId>QRCode</groupId>
-            <artifactId>QRCode</artifactId>
-            <version>1.0</version>
         </dependency>
         <!-- velocity 模板 -->
         <dependency>
